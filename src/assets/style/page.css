@@ -1,0 +1,354 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --text-men: #002772;
+  --text-women: #720060;
+  --text-notFound: #1E1E1E;
+  --text-category: #3F3F3F;
+  --bg-men: #D6E6FF;
+  --bg-women: #FDE2FF;
+  --bg-notFound: #DCDCDC;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  height: 70vh;
+  content: "";
+  z-index: -1;
+}
+
+section.men:after {
+  background-color: var(--bg-men);
+}
+
+section.women:after {
+  background-color: var(--bg-women);
+}
+
+section.notFound:after {
+  background-color: var(--bg-notFound);
+}
+
+main {
+  display: flex;
+  width: 90%;
+  height: 75%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  border-radius: 10px;
+}
+
+main.notFound {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("~@/assets/img/sad-face.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 20px;
+}
+
+.product-image {
+  width: 35%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.product-description {
+  width: 65%;
+  height: 100%;
+}
+
+.description-container {
+  padding: 50px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+.title.men {
+  color: var(--text-men);
+}
+
+.title.women {
+  color: var(--text-women);
+}
+
+.title.notFound {
+  color: var(--text-notFound);
+}
+
+.category-rating {
+  padding-top: 25px;
+  padding-bottom: 11px;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.description {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.price {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.price p {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 15.5px;
+  line-height: 33px;
+}
+
+.price.men p {
+  color: var(--text-men);
+}
+
+.price.women p {
+  color: var(--text-women);
+}
+
+.price.notFound p {
+  color: var(--text-notFound);
+}
+
+.cta {
+  margin-top: 15px;
+  display: flex;
+}
+
+
+.buy-now {
+  width: 50%;
+}
+
+.next-product {
+  width: 50%;
+}
+
+.buy-now button {
+  color: white;
+  background-color: #002772;
+  font-size: 20px;
+  width: 90%;
+  height: 42px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 3px solid #002772;
+}
+
+.buy-now.men button {
+  background-color: var(--text-men);
+  border: 3px solid var(--text-men);
+}
+
+.buy-now.women button {
+  background-color: var(--text-women);
+  border: 3px solid var(--text-women);
+}
+
+.next-product button {
+  background-color: white;
+  font-size: 20px;
+  width: 90%;
+  height: 42px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.next-product.men button {
+  color: var(--text-men);
+  border: 3px solid var(--text-men);
+}
+
+.next-product.women button {
+  color: var(--text-women);
+  border: 3px solid var(--text-women);
+}
+
+button.cta-404 {
+  margin-top: 13px;
+  font-size: 20px;
+  object-fit: contain;
+  width: 465px;
+  height: 42px;
+  background-color: white;
+}
+
+button.cta-404:hover {
+  background-color: lightblue;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
